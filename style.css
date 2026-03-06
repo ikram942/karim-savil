@@ -1195,3 +1195,90 @@ body {
     width:100%;
     height:auto;
 }
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff;
+    padding: 20px;
+}
+
+/* Section des produits */
+.products-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Grid des produits */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* Card produit */
+.product-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.product-card p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #312f30;
+    font-size: 1em;
+}
+
+/* Media Queries pour mobile */
+@media screen and (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 produits par ligne */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr; /* 1 produit par ligne sur petit écran */
+    }
+}
+
+
+
