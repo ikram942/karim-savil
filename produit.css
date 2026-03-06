@@ -1102,3 +1102,34 @@ body{
     font-size: 14px;
   }
 }
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+
+  .shop{
+    padding:0 5%;
+  }
+
+  .products{
+    grid-template-columns: repeat(2, 1fr); /* 2 produits par ligne */
+    gap:15px;
+    padding:30px 10px;
+  }
+
+  .card{
+    padding:12px;
+  }
+
+  .card img{
+    height:160px;
+  }
+
+  .card h4{
+    font-size:13px;
+  }
+
+  .price,
+  .new{
+    font-size:14px;
+  }
+
+}
