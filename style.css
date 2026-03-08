@@ -1274,3 +1274,29 @@ body {
         grid-template-columns: 1fr 1fr; /* 2 produits par ligne */
     }
 }
+
+.social-media{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:40px;
+}
+
+.social-media a{
+font-size:22px;
+color:#333;
+transition:0.3s;
+}
+
+.social-media a:hover{
+color:#6c4dff;
+transform:scale(1.2);
+}
+.social-media{
+position:fixed;
+right:20px;
+bottom:100px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
