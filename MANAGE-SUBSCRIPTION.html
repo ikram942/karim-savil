@@ -2,8 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Sign in - Menscrafted</title>
+  <title>Sign in - MenSavil</title>
   <link rel="stylesheet" href="login.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   <style>
     * {
@@ -18,13 +19,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .login-container {
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .brand {
@@ -115,6 +121,21 @@ input {
   text-decoration: none;
   color: #444;
   font-size: 14px;
+
+  @media (max-width: 600px) {
+
+  .login-container {
+    max-width: 100%;
+    padding: 30px 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  body {
+    background: white;
+  }
+
+}
 }
   </style>
 <body>
