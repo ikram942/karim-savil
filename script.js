@@ -2,6 +2,45 @@ function toggleMenu() {
     document.getElementById("sidebar").classList.toggle("open");
     document.getElementById("overlay").classList.toggle("show");
 }
+
+function toggleCountry() {
+    document.getElementById("countryDropdown").classList.toggle("show");
+}
+
+function selectCountry(country) {
+    document.querySelector(".country-btn").innerHTML =
+        "🌍 " + country + ' <i class="fas fa-chevron-down"></i>';
+
+    document.getElementById("countryDropdown").classList.remove("show");
+}
+
+const searchBtn = document.getElementById("searchBtn");
+const cartBtn = document.getElementById("cartBtn");
+
+const searchOverlay = document.getElementById("searchOverlay");
+const cartPanel = document.getElementById("cartPanel");
+
+const closeSearch = document.getElementById("closeSearch");
+const closeCart = document.getElementById("closeCart");
+
+/* SEARCH */
+searchBtn.onclick = () => {
+    searchOverlay.classList.add("active");
+};
+
+closeSearch.onclick = () => {
+    searchOverlay.classList.remove("active");
+};
+
+/* CART */
+cartBtn.onclick = () => {
+    cartPanel.classList.add("active");
+};
+
+closeCart.onclick = () => {
+    cartPanel.classList.remove("active");
+};
+
 let slides = document.querySelectorAll(".slide");
 let bars = document.querySelectorAll(".bar");
 let index = 0;
@@ -87,7 +126,6 @@ document.querySelector(".hero-slider").addEventListener("touchend",e=>{
 });
 
 const openSearch = document.getElementById("openSearch");
-const closeSearch = document.getElementById("closeSearch");
 const searchBar = document.getElementById("searchBar");
 const searchInput = document.getElementById("searchInput");
 const products = document.querySelectorAll(".product-card");
@@ -131,3 +169,15 @@ window.onclick = (e) => {
     loginOverlay.classList.remove("active");
   }
 };
+
+const openMenu = document.getElementById("openMenu");
+const closeMenu = document.getElementById("closeMenu");
+const mobileMenu = document.getElementById("mobileMenu");
+
+openMenu.onclick = () =>{
+mobileMenu.classList.add("active");
+}
+
+closeMenu.onclick = () =>{
+mobileMenu.classList.remove("active");
+}
