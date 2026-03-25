@@ -1,3 +1,7 @@
+function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("open");
+    document.getElementById("overlay").classList.toggle("show");
+}
 let slides = document.querySelectorAll(".slide");
 let bars = document.querySelectorAll(".bar");
 let index = 0;
