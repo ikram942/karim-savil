@@ -7,7 +7,6 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,14 +18,38 @@
     </div>
 
     <h1 class="logo">Mensavil</h1>
-    <div class="icons">
+    <!-- ICONS -->
+<div class="icons">
+    <button class="icon-btn" id="searchBtn">
         <i class="fas fa-search"></i>
-        <i class="fas fa-user"></i>
-        <i class="fas fa-shopping-cart"></i>
-    </div>
-</header>
+    </button>
 
-<!-- 📌 SIDEBAR MENU -->
+    <button class="icon-btn" id="cartBtn">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div id="searchOverlay" class="search-overlay">
+    <div class="search-content">
+        <input type="text" placeholder="Search products...">
+        <span id="closeSearch">✕</span>
+    </div>
+</div>
+
+<!-- CART PANEL -->
+<div id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+        <h3>Cart</h3>
+        <span id="closeCart">✕</span>
+    </div>
+
+    <div class="cart-body">
+        <p>Your cart is empty</p>
+    </div>
+</div>
+
+</header>
 
 <!-- 📌 SIDEBAR MENU LUXE -->
 <div id="sidebar" class="sidebar">
