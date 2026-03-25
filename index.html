@@ -2,89 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savilmen Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/fev-icom.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Mensavil</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<header class="top-header">
-
-    <div class="country-select">
-    <div class="country-btn" id="countryBtn">
-        <span id="selectedCountry">
-            🇲🇦 MAROC <small>MAD</small>
-        </span>
-        <i class="fa-solid fa-chevron-down"></i>
+<!-- 🔝 NAVBAR -->
+<header class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
     </div>
 
-    <div class="country-dropdown" id="countryDropdown">
-        <input type="text" id="countrySearch" placeholder="Rechercher un pays...">
-
-        <div class="country-list" id="countryList"></div>
+    <h1 class="logo">Mensavil</h1>
+    <div class="icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-user"></i>
+        <i class="fas fa-shopping-cart"></i>
     </div>
-</div>
-
-    <h1 class="logo">MenSavil</h1>
-
-    <div class="right">
-        <i class="fa-solid fa-magnifying-glass" id="openSearch"></i>
-       <i class="fa-regular fa-user" id="openLogin"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-<div class="search-bar" id="searchBar">
-  <input 
-    type="text" 
-    id="searchInput" 
-    placeholder="Rechercher un produit..."
-  >
-  <i class="fa-solid fa-xmark" id="closeSearch"></i>
-<!-- LOGIN POPUP -->
-<div class="login-overlay" id="loginOverlay">
-  <div class="login-modal">
-
-    <span class="close-login" id="closeLogin">&times;</span>
-
-    <h4 class="brand">MENSAVIL</h4>
-    <h2>Sign in</h2>
-    <p class="subtitle">Sign in or create an account</p>
-
-    <button class="google-btn">
-      Continue with Google
-    </button>
-
-    <div class="divider">
-      <span></span>
-      <p>or</p>
-      <span></span>
-    </div>
-
-    <form id="loginForm">
-      <input type="email" placeholder="Email" required>
-      <button type="submit" class="continue-btn">Continue</button>
-    </form>
-
-    <div class="terms">
-      <a href="#">Privacy policy</a>
-      <a href="#">Terms of service</a>
-    </div>
-
-  </div>
-</div>
-</div>
-
 </header>
 
-<nav class="menu">
-    <a href="index.html" class="active">HOME</a>
-    <a href="PRODUCTS.html">PRODUCTS</a>
-    <a href="TUTORIALS.html">TUTORIALS</a>
-    <a href="MANAGE-SUBSCRIPTION.html">MANAGE SUBSCRIPTION</a>
-    <a href="CONTACT-US.html">CONTACT US</a>
-</nav>
+<!-- 📌 SIDEBAR MENU -->
+
+<!-- 📌 SIDEBAR MENU LUXE -->
+<div id="sidebar" class="sidebar">
+
+    <!-- Top (close button) -->
+    <div class="sidebar-header">
+        <span class="close-btn" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </span>
+    </div>
+
+    <!-- Menu links -->
+    <div class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="PRODUCTS.html">Products</a>
+        <a href="TUTORIALS.html">Tutorials</a>
+        <a href="MANAGE-SUBSCRIPTION.html">Manage Subscription</a>
+        <a href="CONTACT-US.html">Contact Us</a>
+    </div>
+
+    <!-- Country -->
+    <div class="country">
+        <i class="fas fa-globe"></i>
+        <span>Morocco (MAD د.م)</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+
+    <!-- Login -->
+    <div class="login">
+        <i class="far fa-user"></i>
+        <span>Log in</span>
+    </div>
+
+   <!-- Social -->
+    <div class="social">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-pinterest-p"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-snapchat"></i>
+        <i class="fab fa-youtube"></i>
+    </div>
+
+</div>
+<!-- Overlay -->
+<div id="overlay" onclick="toggleMenu()"></div>
+
 <body>
     <section class="hero-slider">
 
