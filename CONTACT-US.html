@@ -2,50 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savilmen Page</title>
-    <link rel="stylesheet" href="contactus.css">
-    <link rel="shortcut icon" href="images/fev-icom.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
+    <title>Mensavil</title>
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="contactus.css">
+</head>
 <body>
 
-<header class="top-header">
-
-    <div class="country-select">
-    <div class="country-btn" id="countryBtn">
-        <span id="selectedCountry">
-            🇲🇦 MAROC <small>MAD</small>
-        </span>
-        <i class="fa-solid fa-chevron-down"></i>
+<!-- 🔝 NAVBAR -->
+<header class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
     </div>
 
-    <div class="country-dropdown" id="countryDropdown">
-        <input type="text" id="countrySearch" placeholder="Rechercher un pays...">
-
-        <div class="country-list" id="countryList"></div>
-    </div>
+    <h1 class="logo">Mensavil</h1>
 </div>
 
-    <h1 class="logo">MenSavil</h1>
-
-    <div class="right">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-regular fa-user"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
 
 </header>
 
-<nav class="menu">
-    <a href="index.html" class="active">HOME</a>
-    <a href="PRODUCTS.html">PRODUCTS</a>
-    <a href="TUTORIALS.html">TUTORIALS</a>
-    <a href="MANAGE-SUBSCRIPTION.html">MANAGE SUBSCRIPTION</a>
-    <a href="CONTACT-US.html">CONTACT US</a>
-</nav>
+<!-- 📌 SIDEBAR MENU LUXE -->
+<div id="sidebar" class="sidebar">
+
+    <!-- Top (close button) -->
+    <div class="sidebar-header">
+        <span class="close-btn" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </span>
+    </div>
+
+    <!-- Menu links -->
+    <div class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="PRODUCTS.html">Products</a>
+        <a href="TUTORIALS.html">Tutorials</a>
+        <a href="MANAGE-SUBSCRIPTION.html">Manage Subscription</a>
+        <a href="CONTACT-US.html">Contact Us</a>
+    </div>
+
+    <!-- Country -->
+<div class="country-select">
+    <div id="countryBtn" class="country-btn" onclick="toggleCountry()">
+        🌍 MOROCCO (MAD د.م)
+        <i class="fas fa-chevron-down"></i>
+    </div>
+
+    <div id="countryDropdown" class="country-dropdown">
+        <div onclick="selectCountry('Morocco (MAD د.م)')">🇲🇦 Morocco (MAD)</div>
+        <div onclick="selectCountry('France (EUR €)')">🇫🇷 France (EUR)</div>
+        <div onclick="selectCountry('USA (USD $)')">🇺🇸 USA (USD)</div>
+        <div onclick="selectCountry('Spain (EUR €)')">🇪🇸 Spain (EUR)</div>
+        <div onclick="selectCountry('UAE (AED د.إ)')">🇦🇪 UAE (AED)</div>
+    </div>
+</div>
+
+
+    <!-- Login -->
+    <div class="login">
+        <i class="far fa-user"></i>
+        <span>Log in</span>
+    </div>
+      <!-- Center: Social Media -->
+    <div class="socials">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" class="social-icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="social-icon tiktok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+    
+   
+
+<!-- Footer / Bottom Menu -->
+<div class="bottom-bar">
+
+    <!-- Left: Copyright -->
+    <div class="bottom-left">
+        © 2026, MenSavil. All rights reserved.
+    </div>
+
+</div>
+
+</div>
+
+
+
+<!-- Overlay -->
+<div id="overlay" onclick="toggleMenu()"></div>
 
     <section class="hero-slider">
 
